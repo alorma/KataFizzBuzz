@@ -59,14 +59,14 @@ class FizzBuzzMachineTest {
     fun `return BUZZ when number is multiple of five`() {
         val result = machine.check(25)
 
-        assert(result).isEqualTo(FIZZ)
+        assert(result).isEqualTo(BUZZ)
     }
 
     @Test
     fun `return FIZZBUZZ when number is multiple of three and five`() {
         val result = machine.check(90)
 
-        assert(result).isEqualTo(FIZZ)
+        assert(result).isEqualTo(FIZZ_BUZZ)
     }
 
 }
