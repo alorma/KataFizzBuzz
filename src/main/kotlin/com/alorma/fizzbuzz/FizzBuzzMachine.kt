@@ -1,10 +1,14 @@
 package com.alorma.fizzbuzz
 
 class FizzBuzzMachine {
-    fun check(number: Int): String = when {
-        number % 3 == 0 && number % 5 == 0 -> "FizzBuzz"
-        number % 3 == 0 -> "Fizz"
-        number % 5 == 0 -> "Buzz"
-        else -> number.toString()
+
+    private var matchers: List<Matcher> = listOf(FizzMatcher(), BuzzMatcher())
+
+    fun check(number: Int): String {
+        var result = ""
+        matchers.forEach {
+            result += it.check(number)
+        }
+        return result.takeIf { it.isNotEmpty() } ?: number.toString()
     }
 }
