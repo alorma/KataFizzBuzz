@@ -1,6 +1,7 @@
 package com.alorma.fizzbuzz
 
 import assertk.assert
+import assertk.assertions.isEqualTo
 import org.junit.Before
 import org.junit.Test
 
